@@ -1,19 +1,14 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-const heading = React.createElement(
-  "h1",
-  { id: " heading" },
-  "This is the heading"
-);
-//Babel Transpiles JSX to React. Create Element(JavaScript Object) => HTML Element while Rendering
-const jsxHeading = (
-  <h1 className="head" tabIndex="5">
-    Heading By using JSX
-  </h1>
+//React Component
+const Title = () =><h1>Title of the Heading😍</h1>
+
+//Component Compositions
+const HeadingComponent = () => (
+  <><Title /><h1 className="heading">This is Our Heading</h1></>
 );
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(jsxHeading);
+root.render(<HeadingComponent />);
 
-// Firstly create Element hme object deta ha => fr hm us object ko DOM p render krate to vo DOM Element hojata
